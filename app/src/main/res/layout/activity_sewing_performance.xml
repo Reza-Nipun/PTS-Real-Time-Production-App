@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_weight="1">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="6"
+        android:background="#C3FF80">
+
+        <ImageView
+            android:id="@+id/backBtnImageView"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_bar_back"/>
+
+        <TextView
+            android:id="@+id/idSewPageTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="4"
+            android:textSize="32dp"
+            android:text="Sewing Summary"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#2dbc01"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/homeBtnImageView"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_marginTop="20dp">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="400dp"
+            android:visibility="invisible"
+            android:id="@+id/idPieChart">
+        </com.github.mikephil.charting.charts.PieChart>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/sewTargetTv"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Target"
+            android:textSize="20dp"
+            android:background="#fff702"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/sewOutputTv"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Output"
+            android:textSize="20dp"
+            android:background="#2dbc01"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/sewBalanceTv"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Balance"
+            android:textSize="20dp"
+            android:background="#fa3c07"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/sewTarget"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textSize="20dp"
+            android:background="#fff702"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/sewOutput"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textSize="20dp"
+            android:background="#2dbc01"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/sewBalance"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textSize="20dp"
+            android:background="#fa3c07"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/idEfficiencyTextView"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="3"
+            android:visibility="invisible"
+            android:text=""
+            android:textAllCaps="true"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:background="#0d38d4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/viewSewDetails"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            android:background="#59f1d5"
+            android:textSize="20dp"
+            android:text="Detail"
+            android:drawableLeft="@drawable/ic_detail"
+            android:layout_marginRight="10dp"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:id="@+id/idSecondFloorSewDetails"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            android:background="#59c8f1"
+            android:textSize="20dp"
+            android:text="1st Floor Detail"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/idFirstFloorSewDetails"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            android:background="#59c8f1"
+            android:textSize="20dp"
+            android:text="2nd Floor Detail"
+            android:layout_marginRight="10dp"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

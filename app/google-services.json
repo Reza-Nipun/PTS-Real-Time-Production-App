@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "651075960600",
+    "firebase_url": "https://efl-pts.firebaseio.com",
+    "project_id": "efl-pts",
+    "storage_bucket": "efl-pts.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651075960600:android:dcfdce8938d8cce8",
+        "android_client_info": {
+          "package_name": "com.example.ismef17.pts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651075960600-3o69srne2opqo762fat89gq8kf6ti8nv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ismef17.pts",
+            "certificate_hash": "4e4899705e519b386ee896141dabb543ea25e9e8"
+          }
+        },
+        {
+          "client_id": "651075960600-i2oa2rnlp5d1raq49eu68v4k9ni3s9ti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpnW--vFoJdT7Rzl4zQl48FVdqJnyIHeE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "651075960600-i2oa2rnlp5d1raq49eu68v4k9ni3s9ti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
