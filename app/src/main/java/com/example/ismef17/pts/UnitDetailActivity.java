@@ -42,6 +42,7 @@ public class UnitDetailActivity extends AppCompatActivity {
     ArrayList<String>targets = new ArrayList<>();
     ArrayList<String>outputs = new ArrayList<>();
     ArrayList<String>efficiencies = new ArrayList<>();
+    ArrayList<String>dhus = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +97,7 @@ public class UnitDetailActivity extends AppCompatActivity {
                 targets.clear();
                 outputs.clear();
                 efficiencies.clear();
+                dhus.clear();
 
                 for(DataSnapshot child : dataSnapshot.getChildren() ){
 
@@ -103,11 +105,13 @@ public class UnitDetailActivity extends AppCompatActivity {
                     String target_res = dataSnapshot.child(child.getKey()).child("Target").getValue().toString();
                     String output_res = dataSnapshot.child(child.getKey()).child("Output").getValue().toString();
                     String eff_res = dataSnapshot.child(child.getKey()).child("Efficiency").getValue().toString();
+                    String dhu_res = dataSnapshot.child(child.getKey()).child("DHU").getValue().toString();
 
                     lines.add(line_res);
                     targets.add(target_res);
                     outputs.add(output_res);
                     efficiencies.add(eff_res);
+                    dhus.add(dhu_res);
 
                 }
                 addHeaders();
@@ -170,6 +174,7 @@ public class UnitDetailActivity extends AppCompatActivity {
             tr.addView(getTextView(i + numCompanies, targets.get(i), Color.BLACK, Typeface.NORMAL, ContextCompat.getColor(this, R.color.colorLightGreen)));
             tr.addView(getTextView(i + numCompanies, outputs.get(i), Color.BLACK, Typeface.NORMAL, ContextCompat.getColor(this, R.color.colorLightGreen)));
             tr.addView(getTextView(i + numCompanies, efficiencies.get(i), Color.BLACK, Typeface.NORMAL, ContextCompat.getColor(this, R.color.colorLightGreen)));
+            tr.addView(getTextView(i + numCompanies, dhus.get(i), Color.BLACK, Typeface.NORMAL, ContextCompat.getColor(this, R.color.colorLightGreen)));
             tl.addView(tr, getTblLayoutParams());
         }
     }
@@ -182,6 +187,7 @@ public class UnitDetailActivity extends AppCompatActivity {
         tr.addView(getTextView(0, "TARGET", Color.WHITE, Typeface.BOLD, ContextCompat.getColor(this, R.color.colorSlidDarkPaste)));
         tr.addView(getTextView(0, "OUTPUT", Color.WHITE, Typeface.BOLD, ContextCompat.getColor(this, R.color.colorSlidDarkPaste)));
         tr.addView(getTextView(0, "EFFICIENCY", Color.WHITE, Typeface.BOLD, ContextCompat.getColor(this, R.color.colorSlidDarkPaste)));
+        tr.addView(getTextView(0, "DHU", Color.WHITE, Typeface.BOLD, ContextCompat.getColor(this, R.color.colorSlidDarkPaste)));
         tl.addView(tr, getTblLayoutParams());
     }
 
